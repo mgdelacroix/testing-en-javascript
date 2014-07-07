@@ -42,9 +42,6 @@ describe('calculadora', function() {
             {method: 'sub', value: 10}
         ]
 
-        console.log(historico);
-        console.log(this.calculadora.record);
-
         expect(this.calculadora.record).to.be.eql(historico);
     });
 
