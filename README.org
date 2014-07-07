@@ -130,7 +130,7 @@
         })
     
         it('I am 40', function() {
-            expect(this.myValue).to.be.equals(40);
+            expect(this.myValue).to.be.equal(40);
         })
     })
   #+END_SRC
@@ -138,5 +138,5 @@
   Utilizamos [[http://chaijs.com/][chai]] para las aserciones:
 
   #+BEGIN_SRC js
-    expect(this.myValue).to.be.equals(40);
+    expect(this.myValue).to.be.equal(40);
   #+END_SRC
