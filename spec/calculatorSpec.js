@@ -35,9 +35,9 @@ describe('calculadora', function() {
         this.calculadora.sub(10);
 
         var historico = [
-            {method: 'add', value: 30, random: 30},
-            {method: 'add', value: 4, random: 30},
-            {method: 'add', value: 60, random: 30},
+            {method: 'add', value: 30},
+            {method: 'add', value: 4},
+            {method: 'add', value: 60},
             {method: 'sub', value: 10}
         ]
 
