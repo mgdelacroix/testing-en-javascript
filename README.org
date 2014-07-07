@@ -29,6 +29,7 @@
   - =chai-jquery=: syntax sugar para chai
   - =sinon=: mocks
   - =mocha=: bloques sintácticos para TDD y BDD
+  - =karma=: test runner
 
 * COMMENT Configuración de Karma
 
