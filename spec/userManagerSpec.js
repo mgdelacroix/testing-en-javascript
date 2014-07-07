@@ -22,7 +22,7 @@ describe('gestor de usuarios', function() {
         startWithStub.restore();
     });
 
-    it('puedo ejecutar funciones al añadir usuarios', function() {
+    it('puedo ejecutar funciones al añadir usuarios (con spy)', function() {
         var spyFunction = sinon.spy();
 
         this.userManager.onAdd(spyFunction);

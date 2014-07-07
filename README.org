@@ -196,8 +196,13 @@
    Reemplaza el comportamiento.
 
    #+BEGIN_SRC js
+     // stub
      test.getLastName = sinon.stub();
      test.getLastName.withArgs("Juan Froilan").returns("Froilan");
+     
+     // doStuff
+     
+     // comprobar expectativas
    #+END_SRC
 
 ** Mock
@@ -212,8 +217,18 @@
      
      // doStuff
      
+     // verificar expectativas
      mock.verify();
    #+END_SRC
+
+   La diferencia que he podido extraer entre =mock= y =stub= es que en
+   el caso del =mock=, creas el =mock=, defines las expectativas y al
+   final del test las verificas (=mock.verify()=). En el caso de
+   =stub=, creas el =stub=, lo usas y al final compruebas el
+   comportamiento usando =expect=.
+
+   Un buen ejemplo del párrafo anterior son los test de /"ejecutar
+   funciones al añadir usuarios"/ del fichero [[spec/userManagerSpec.js][userManagerSpec.js]]
 
 ** Fake timer
 
