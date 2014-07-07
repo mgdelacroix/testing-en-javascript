@@ -31,4 +31,25 @@ describe('gestor de usuarios', function() {
         expect(spyFunction.calledOnce).to.be.true;
         expect(this.userManager.get()).to.be.eql(['jimmy']);
     });
+
+    it('puedo ejecutar funciones al añadir usuarios (con mock)', function() {
+        var mockFunction = sinon.mock();
+        mockFunction.once();
+
+        this.userManager.onAdd(mockFunction);
+        this.userManager.add('jimmy');
+        
+        expect(this.userManager.get()).to.be.eql(['jimmy']);
+        mockFunction.verify();
+    });
+
+    it('puedo ejecutar funciones al añadir usuarios (con stub)', function() {
+        var stubFunction = sinon.stub();
+
+        this.userManager.onAdd(stubFunction);
+        this.userManager.add('jimmy');
+        
+        expect(this.userManager.get()).to.be.eql(['jimmy']);
+        expect(stubFunction.calledOnce).to.be.true;
+    });
 });
