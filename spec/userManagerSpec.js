@@ -21,4 +21,14 @@ describe('gestor de usuarios', function() {
 
         startWithStub.restore();
     });
+
+    it('puedo ejecutar funciones al añadir usuarios', function() {
+        var spyFunction = sinon.spy();
+
+        this.userManager.onAdd(spyFunction);
+        this.userManager.add('jimmy');
+
+        expect(spyFunction.calledOnce).to.be.true;
+        expect(this.userManager.get()).to.be.eql(['jimmy']);
+    });
 });
