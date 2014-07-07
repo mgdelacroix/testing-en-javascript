@@ -30,4 +30,21 @@ describe('calculadora', function() {
         expect(this.calculadora.smaller(10)).to.be.true;
     })
 
+    it('puedo revisar el histórico', function() {
+        this.calculadora.add(30, 4, 60);
+        this.calculadora.sub(10);
+
+        var historico = [
+            {method: 'add', value: 30, random: 30},
+            {method: 'add', value: 4, random: 30},
+            {method: 'add', value: 60, random: 30},
+            {method: 'sub', value: 10}
+        ]
+
+        console.log(historico);
+        console.log(this.calculadora.record);
+
+        expect(this.calculadora.record).to.be.eql(historico);
+    })
+
 })
