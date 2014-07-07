@@ -200,8 +200,6 @@
      test.getLastName.withArgs("Juan Froilan").returns("Froilan");
    #+END_SRC
 
-   ¿Hay que restaurarlo?
-
 ** Mock
 
    Igual que el stub pero tiene unas expectativas de comunicación,

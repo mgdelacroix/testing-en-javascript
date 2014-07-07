@@ -15,7 +15,7 @@ describe('gestor de usuarios', function() {
         this.userManager.add("alonso");
         this.userManager.add("jimmy");
         var userList = this.userManager.get();
-        var expectedUserList = [ 'jimmy' ]
+        var expectedUserList = [ 'jimmy' ];
 
         expect(userList).to.be.eql(expectedUserList);
 
