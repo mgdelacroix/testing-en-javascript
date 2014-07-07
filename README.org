@@ -101,3 +101,42 @@
   #+BEGIN_SRC shell-script
     $ ./node_modules/karma/bin/karma start
   #+END_SRC
+
+* Anatomía de un test
+
+  Para escribir cada especificación creamos un bloque =describe= que
+  tiene esta pinta:
+
+  #+BEGIN_SRC js
+    describe('definition', function() {
+        beforeEach(function() {
+        })
+    
+        afterEach(function() {
+        })
+    
+        it('definition', function(){
+        })
+    }
+  #+END_SRC
+
+  Dentro de los bloques =beforeEach= y =afterEach= podemos settear
+  variables para utilizar dentro de los =it= en =this=:
+
+  #+BEGIN_SRC js
+    describe('definition' function() {
+        beforeEach(function() {
+            this.myValue = 40;
+        })
+    
+        it('I am 40', function() {
+            expect(this.myValue).to.be.equals(40);
+        })
+    })
+  #+END_SRC
+
+  Utilizamos [[http://chaijs.com/][chai]] para las aserciones:
+
+  #+BEGIN_SRC js
+    expect(this.myValue).to.be.equals(40);
+  #+END_SRC
