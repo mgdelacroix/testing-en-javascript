@@ -84,5 +84,5 @@ Test end-to-end: prueban sobre el DOM de la web definitiva.
     files: [
         'test/**/*Spec.js',
         'spec/**/*.js'
-    ],
+    ]
   #+END_SRC
