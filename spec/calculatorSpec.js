@@ -21,6 +21,7 @@ describe('calculadora', function() {
 
         expect(this.calculadora.bigger(100)).to.be.true;
         expect(this.calculadora.bigger(10)).not.to.be.true;
+        expect(this.calculadora.bigger(-10)).to.be.false;
     })
 
     it('puedo comprobar que un número sea menor que otro', function() {
