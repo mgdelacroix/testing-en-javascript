@@ -141,3 +141,56 @@
   #+BEGIN_SRC js
     expect(this.myValue).to.be.equal(40);
   #+END_SRC
+
+  Si queremos ejecutar un solo bloque =describe=, podemos añadirle
+  =.only=, y si queremos ignorarlo, =.skip=.
+
+  #+BEGIN_SRC js
+    // solo se ejecutará este bloque
+    describe.only('', function() {})
+    
+    // este bloque no se ejecutará
+    describe.skip('', function() {})
+  #+END_SRC
+
+* Sinon
+
+  Sirve para utilizar mocks.
+
+** Spy
+
+   No reemplaza el comportamiento, y sobre él podemos hacer
+   comprobaciones para ver si se ha llamado y como.
+
+   Después de utilizar spies tenemos que restaurar el comportamiento
+   por defecto de los objetos espiados.
+
+   #+BEGIN_SRC js
+     sinon.spy(jQuery, 'post');
+    
+     // doStuff
+
+     expect(jQuery.post.called).to.be.true;
+     expect(jQuery.post.calledOnce).to.be.true;
+     expect(jQuery.post.calledWith(user)).to.be.true;
+    
+     jQuery.post.restore();
+   #+END_SRC
+
+   Si en lugar de usar sinon.spy utilizamos this.spy, Sinon ya sabe
+   que tiene que restaurar el comportamiento, así que no tendremos
+   que hacerlo nosotros.
+
+   #+BEGIN_SRC js
+     this.spy(jQuery, 'post');
+    
+     // doStuff
+        
+     expect(jQuery.post.called).to.be.true;
+     expect(jQuery.post.calledOnce).to.be.true;
+     expect(jQuery.post.calledWith(user)).to.be.true;
+   #+END_SRC
+
+** Stub
+
+   Reemplaza el comportamiento.
