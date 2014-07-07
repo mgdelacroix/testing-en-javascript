@@ -30,7 +30,7 @@
   - =sinon=: mocks
   - =mocha=: bloques sintácticos para TDD y BDD
 
-* Configuración de Karma
+* COMMENT Configuración de Karma
 
   Ejecutamos el wizard de Karma
 
@@ -82,8 +82,8 @@
 
   #+BEGIN_SRC js
     files: [
-        'test/**/*Spec.js',
-        'spec/**/*.js'
+        'js/**/*.js',
+        'spec/**/*Spec.js'
     ]
   #+END_SRC
 
