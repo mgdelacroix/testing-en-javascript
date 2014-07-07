@@ -194,3 +194,25 @@
 ** Stub
 
    Reemplaza el comportamiento.
+
+   #+BEGIN_SRC js
+     test.getLastName = sinon.stub();
+     test.getLastName.withArgs("Juan Froilan").returns("Froilan");
+   #+END_SRC
+
+   ¿Hay que restaurarlo?
+
+** Mock
+
+   Igual que el stub pero tiene unas expectativas de comunicación,
+   que si no se cumplen falla el test.
+
+   #+BEGIN_SRC js
+     // mock
+     
+     // expectativas
+     
+     // doStuff
+     
+     mock.verify();
+   #+END_SRC
