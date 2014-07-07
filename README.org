@@ -2,7 +2,7 @@
 
 * Definiciones
 
-Test end-to-end: prueban sobre el DOM de la web definitiva.
+/Test end-to-end/: prueban sobre el DOM de la web definitiva.
 
 * Herramientas
 
@@ -93,11 +93,11 @@ Test end-to-end: prueban sobre el DOM de la web definitiva.
   que karma sea capaz de abrirlo:
 
   #+BEGIN_SRC shell-script
-    sudo ln -s /usr/bin/chromium /usr/local/bin/google-chrome
+    $ sudo ln -s /usr/bin/chromium /usr/local/bin/google-chrome
   #+END_SRC
 
   Lanzamos los tests desde el directorio del proyecto:
 
   #+BEGIN_SRC shell-script
-    ./node_modules/karma/bin/karma start
+    $ ./node_modules/karma/bin/karma start
   #+END_SRC
