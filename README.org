@@ -6,24 +6,26 @@
 
 * Herramientas
 
-#+BEGIN_SRC js
-  {
-    "name": "js-testing-workshop",
-    "version": "0.0.0",
-    "devDependencies": {
-      "chai": "^1.9.1",
-      "chai-jquery": "^1.2.3",
-      "karma": "^0.12.16",
-      "karma-chai": "^0.1.0",
-      "karma-chrome-launcher": "^0.1.4",
-      "karma-html2js-preprocessor": "^0.1.0",
-      "karma-mocha": "^0.1.4",
-      "karma-sinon": "^1.0.3",
-      "mocha": "^1.20.1",
-      "sinon": "^1.10.2"
+  Contenido de [[package.json]]
+
+  #+BEGIN_SRC js
+    {
+      "name": "js-testing-workshop",
+      "version": "0.0.0",
+      "devDependencies": {
+        "chai": "^1.9.1",
+        "chai-jquery": "^1.2.3",
+        "karma": "^0.12.16",
+        "karma-chai": "^0.1.0",
+        "karma-chrome-launcher": "^0.1.4",
+        "karma-html2js-preprocessor": "^0.1.0",
+        "karma-mocha": "^0.1.4",
+        "karma-sinon": "^1.0.3",
+        "mocha": "^1.20.1",
+        "sinon": "^1.10.2"
+      }
     }
-  }
-#+END_SRC
+  #+END_SRC
 
   - =chai=: aserciones
   - =chai-jquery=: syntax sugar para chai
@@ -31,7 +33,9 @@
   - =mocha=: bloques sintácticos para TDD y BDD
   - =karma=: test runner
 
-* COMMENT Configuración de Karma
+* Configuración de Karma
+
+  [[file:images/karma.png]]
 
   Ejecutamos el wizard de Karma
 
@@ -136,6 +140,8 @@
     })
   #+END_SRC
 
+  [[file:images/chai.png]]
+
   Utilizamos [[http://chaijs.com/][chai]] para las aserciones:
 
   #+BEGIN_SRC js
@@ -154,6 +160,8 @@
   #+END_SRC
 
 * Sinon
+
+  [[file:images/sinon.png]]
 
   Sirve para utilizar mocks.
 
