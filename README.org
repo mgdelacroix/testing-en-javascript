@@ -267,3 +267,13 @@
      
      // expect ...
    #+END_SRC
+
+* Kaleidos Summer Mondays
+
+  This course is part of the [[http://www.kaleidos.net/blog/346/kaleidos-summer-mondays/][Kaleidos Summer Mondays]]
+  initiative. Thanks to Kaleidos for giving us the time and resources
+  to make it possible.
+
+  Thanks to [[http://github.com/juanfran][juanfran]] for preparing and giving this course.
+
+  [[file:images/kaleidos.png]]
